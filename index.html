@@ -1,158 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mizan Siddiqui | Portfolio Resume</title>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mizan Siddiqi - Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-    /* Base Styles */
-    * {
-      box-sizing: border-box;
-    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  background-color: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+body{
+background:#f4f7fc;
+color:#333;
 }
 
-/* Header */
-header {
-  background: #0a58ca;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-  border-radius: 8px;
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
 }
 
-header h1 {
-  margin-bottom: 8px;
+.hero{
+background:linear-gradient(135deg,#0a58ca,#003b8f);
+color:white;
+padding:60px 30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 
-header p {
-  margin: 4px 0;
+.profile-img{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+margin-bottom:20px;
 }
 
-/* Sections */
-section {
-  background: #ffffff;
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+.hero h1{
+font-size:3rem;
+margin-bottom:10px;
 }
 
-h2 {
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 6px;
-  margin-bottom: 12px;
-  color: #0a58ca;
+.hero p{
+font-size:1.1rem;
+opacity:.95;
 }
 
-ul {
-  padding-left: 20px;
+.contact{
+margin-top:20px;
 }
 
-li {
-  margin-bottom: 6px;
+.contact a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:500;
 }
 
-/* Skills Grid */
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+.contact a:hover{
+text-decoration:underline;
 }
 
-.skill {
-  background: #e7f0ff;
-  padding: 8px 12px;
-  border-radius: 4px;
-  text-align: center;
-  font-weight: bold;
+.section{
+background:white;
+padding:30px;
+margin-top:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #666;
+.section:hover{
+transform:translateY(-5px);
 }
 
+.section h2{
+color:#0a58ca;
+margin-bottom:20px;
+padding-bottom:10px;
+border-bottom:2px solid #eee;
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
+
+.skill{
+background:linear-gradient(135deg,#0a58ca,#1e88e5);
+color:white;
+padding:12px;
+text-align:center;
+border-radius:10px;
+font-weight:600;
+transition:.3s;
+}
+
+.skill:hover{
+transform:scale(1.05);
+}
+
+.timeline{
+border-left:4px solid #0a58ca;
+padding-left:20px;
+}
+
+.job{
+margin-bottom:25px;
+}
+
+.job h3{
+color:#0a58ca;
+margin-bottom:5px;
+}
+
+.job ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+.project{
+margin-bottom:25px;
+padding:20px;
+background:#f8fbff;
+border-radius:12px;
+border-left:5px solid #0a58ca;
+}
+
+.project h3{
+color:#0a58ca;
+margin-bottom:10px;
+}
+
+.resume-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:white;
+color:#0a58ca;
+font-weight:600;
+border-radius:30px;
+text-decoration:none;
+transition:.3s;
+}
+
+.resume-btn:hover{
+transform:translateY(-3px);
+}
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:30px;
+color:#666;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:40px 20px;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.profile-img{
+width:130px;
+height:130px;
+}
+
+.skills{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:480px){
+
+.skills{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:1.7rem;
+}
+
+}
 
 </style>
+</head>
 
-  <div class="container">
+<body>
 
-    <!-- Header -->
-```
-<header>
-  <h1>Mizan Siddiqui</h1>
-  <p>Mechanical Engineering Student | Full Stack Developer</p>
-  <p>Email: mizansid5gmail.com | Phone: +91-9519881210</p>
-</header>
+<div class="container">
 
-<!-- About -->
-<section>
-  <h2>Profile Summary</h2>
-  <p>
-    Motivated mechanical engineering student with strong interest in Front-end development
-    using HTML, CSS and JavaScript. Passionate about building responsive and accessible
-    web applications.
-  </p>
-</section>
+<div class="hero">
 
-<!-- Education -->
-<section>
-  <h2>Education</h2>
-  <ul>
-    <li><strong>B.Tech - Mechanical Engineering</strong>, Dr. A.P.J. Abdul Kalam Technical University (AKTU) (2021-2025)</li>
-    <li>Relevant Coursework: Data Structures, Thermodynamics, Web Development</li>
-  </ul>
-</section>
+<!-- Add your image path below -->
+<img src="/myphoto.jpg.png" alt="Mizan Siddiqui" class="profile-img">
 
-<!-- Skills -->
-<section>
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Java</div>
-    <div class="skill">React</div>
-    <div class="skill">Git & GitHub</div>
-  </div>
-</section>
+<h1>Mizan Siddiqui</h1>
 
-<!-- Projects -->
-<section>
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>Personal Portfolio Website</strong> - Built using HTML, CSS, JavaScript</li>
-    <li><strong>Task Manager App</strong> - React-based application</li>
-  </ul>
-</section>
+<p>
+Frontend Developer • React.js Specialist • UI/UX Enthusiast • MBA Business Analytics
+</p>
 
-<!-- Footer -->
+<div class="contact">
+
+📧 mizansid5@gmail.com |
+📱 +91-9519881210
+
+<br><br>
+
+<a href="https://github.com/mizansid5-maker" target="_blank">GitHub</a>
+
+|
+
+<a href="https://www.linkedin.com/in/mizan-siddiqui-799996157" target="_blank">LinkedIn</a>
+
+</div>
+
+<a href="#" class="resume-btn">Download Resume</a>
+
+</div>
+
+<div class="section">
+
+<h2>Professional Summary</h2>
+
+<p>
+Frontend Developer with expertise in React.js, JavaScript, HTML5, CSS3 and modern UI development.
+Experienced in building responsive web applications, dashboards and business solutions.
+Currently pursuing MBA in Business Analytics, combining technical and analytical skills
+to create impactful digital products.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="job">
+<h3>Frontend Developer Intern — Unified Mentor</h3>
+<p><b>Feb 2026 – Present</b></p>
+
+<ul>
+<li>Built responsive React.js interfaces.</li>
+<li>Integrated REST APIs using Axios.</li>
+<li>Improved website performance and responsiveness.</li>
+<li>Worked in Agile development environment.</li>
+</ul>
+
+</div>
+
+<div class="job">
+<h3>Frontend Developer — Clinch Metric Bridge</h3>
+<p><b>2025 – 2026</b></p>
+
+<ul>
+<li>Developed reusable React components.</li>
+<li>Created modern user interfaces.</li>
+<li>Enhanced mobile responsiveness.</li>
+</ul>
+
+</div>
+
+<div class="job">
+<h3>Junior Engineer — Gypsum Pvt Ltd</h3>
+<p><b>2021 – 2022</b></p>
+
+<ul>
+<li>Mechanical design using SolidWorks.</li>
+<li>Worked with production teams.</li>
+<li>Prepared engineering drawings.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Projects</h2>
+
+<div class="project">
+
+<h3>RentiGo Vehicle Rental System</h3>
+
+<p>
+Full Stack MERN application with vehicle booking system, admin dashboard,
+authentication and vehicle management.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>TaskBuddy - Smart Task Manager</h3>
+
+<p>
+React based task management application with LocalStorage support,
+priority tracking, filtering and responsive dashboard UI.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Visualization Dashboard</h3>
+
+<p>
+Interactive analytics dashboard using React.js, Chart.js and APIs.
+Displays real-time insights with charts, cards and modern UI.
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Portfolio Website</h3>
+
+<p>
+Personal portfolio website showcasing projects, skills and experience.
+Built using HTML, CSS and JavaScript.
+</p>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React.js</div>
+<div class="skill">Tailwind CSS</div>
+<div class="skill">Bootstrap</div>
+<div class="skill">Node.js</div>
+<div class="skill">Express.js</div>
+<div class="skill">MongoDB</div>
+<div class="skill">SQL</div>
+<div class="skill">Java</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">Axios</div>
+<div class="skill">Chart.js</div>
+<div class="skill">REST API</div>
+<div class="skill">Figma</div>
+<div class="skill">UI/UX Design</div>
+<div class="skill">Power BI</div>
+<div class="skill">Business Analytics</div>
+<div class="skill">SolidWorks</div>
+<div class="skill">AutoCAD</div>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Education</h2>
+
+<ul>
+
+<li>
+<b>MBA in Business Analytics</b> —
+Amity University (Pursuing)
+</li>
+
+<br>
+
+<li>
+<b>B.Tech Mechanical Engineering</b> —
+Dr. A.P.J Abdul Kalam Technical University (AKTU)
+</li>
+
+<br>
+
+<li>
+<b>Diploma in Mechanical Production</b> —
+BTE UP
+</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Achievements</h2>
+
+<ul>
+<li>Developed multiple React.js applications and dashboards.</li>
+<li>Built full-stack MERN projects.</li>
+<li>Strong understanding of UI/UX and responsive design.</li>
+<li>Engineering + Analytics hybrid professional.</li>
+</ul>
+
+</div>
+
 <footer>
-<p>&copy; 2025 Mizan Siddiqui | Resume Website</p>
-    </footer>
 
-  </div>
-```
+© 2026 Mizan Siddiqui | Frontend Developer Portfolio
 
-  </div>
+</footer>
+
+</div>
 
 </body>
 </html>
